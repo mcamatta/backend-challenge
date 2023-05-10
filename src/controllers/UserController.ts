@@ -4,22 +4,16 @@ import UserService from '../services/UserServices';
 
 class UserController {
 
-    private readonly config: object;
-
-    constructor() {
-        this.config = {
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28',
-                "Authorization": "Bearer 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"
-            }
-        }
-    }
-
     public async users(request: Request, response: Response) {
 
         try {
             const userService = new UserService();
-            const users = await axios.get(`https://api.github.com/users?since=${request.query.since}`, this.config);
+            const users = await axios.get(`https://api.github.com/users?since=${request.query.since}`, {
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28',
+                    "Authorization": "Bearer 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"
+                }
+            });
             
             const data = await userService.treatPagination(request, users.data);
 
@@ -33,7 +27,12 @@ class UserController {
     public async details(request: Request, response: Response) {
 
         try {
-            const details = await axios.get(`https://api.github.com/users/${request.params.username}`, this.config);
+            const details = await axios.get(`https://api.github.com/users/${request.params.username}`, {
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28',
+                    "Authorization": "Bearer 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"
+                }
+            });
 
             return response.json(details.data);
         } catch (err) {
@@ -44,7 +43,12 @@ class UserController {
     public async repos(request: Request, response: Response) {
 
         try{
-            const repos = await axios.get(`https://api.github.com/users/${request.params.username}/repos`, this.config);
+            const repos = await axios.get(`https://api.github.com/users/${request.params.username}/repos`, {
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28',
+                    "Authorization": "Bearer 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"
+                }
+            });
 
             return response.json(repos.data);
         } catch (err) {
