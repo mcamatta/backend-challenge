@@ -5,4 +5,7 @@ const app = express();
 
 app.use('/api', router);
 
-app.listen(8000, () => console.log('Server listening on port 8000'));
+app.listen(
+    process.env.PORT ? Number(process.env.PORT) : 3333, 
+    () => console.log('HTTP Server Running')
+);
