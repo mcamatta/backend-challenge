@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
