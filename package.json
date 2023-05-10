@@ -2,6 +2,9 @@
   "name": "backend-project",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "16"
+  },
   "scripts": {
     "dev": "tsx src/server.ts",
     "build": "tsup src",
