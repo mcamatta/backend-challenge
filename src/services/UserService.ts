@@ -4,7 +4,7 @@ class UserService {
 
     async treatPagination(request: Request, data: any) {
         
-        const path = `${request.protocol}://${request.get('host')}${request.path}`; 
+        const path = `${request.protocol}://${request.get('host')}${request.originalUrl.split("?").shift()}`; 
         const last = data[data.length - 1];
         
         if(!last) {

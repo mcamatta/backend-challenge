@@ -1,6 +1,6 @@
 import {Request, Response} from 'express';
 import axios from 'axios';
-import UserService from '../services/UserServices';
+import UserService from '../services/UserService';
 
 class UserController {
 
