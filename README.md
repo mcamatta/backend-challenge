@@ -1,4 +1,4 @@
-# Backend Challenge - Shaw and Partners
+# Backend Challenge
 
 ## Instructions to execute the application
 <hr/>
