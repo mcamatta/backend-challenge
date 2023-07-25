@@ -10,7 +10,7 @@ Procurei manter o código organizado e escalável.
 Nela eu adicionei tratamentos para listagem de todos os usuários, utilizando um serviço para atender tal requisito.
 Criei uma navegação que permite que a paginação no resultado dos dados.
 
-Além disso a aplicação permite verificar detalhes e os repositórios de determinado usuário.
+Além disso, a aplicação permite verificar detalhes e os repositórios de determinado usuário.
 
 ## Endpoints
 
